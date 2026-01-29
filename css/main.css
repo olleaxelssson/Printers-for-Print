@@ -1,0 +1,13 @@
+/* Header */
+
+.logo {
+  height: vw;
+}
+
+/* Body */
+body {
+  margin: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Text Elements */
