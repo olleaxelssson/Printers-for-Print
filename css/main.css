@@ -102,10 +102,17 @@ header {
   display: block;
 }
 
+.poster:hover {
+  opacity: 0.95;
+  transform: scale3d(1.005, 1.005, 1);
+}
+
 /* Artwork page (poster-01.html) */
 
 .poster-gif {
   width: 20%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Footer */
