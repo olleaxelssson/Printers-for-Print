@@ -1,69 +1,117 @@
-/* Header */
-
-.logo {
-  display: block;
-  margin: auto;
-  height: 10rem;
-}
-
-.logo:hover {
-  transition: transform 0.3s ease;
-  transform: scale3d(1.1, 1, 1);
-}
-/* Add a container for the posters */
-
-.posters-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.back-arrow {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  color: black;
-}
-
-.poster-gif {
-  display: block;
-  margin: auto;
-  width: 500px;
-}
-
-/* Body */
 body {
   margin: 1rem;
-  font-family: Arial, sans-serif;
 }
 
-/* Text Elements */
+/* Text styles */
+
 h1 {
-  color: black;
-  text-align: center;
-}
-h2 {
-  color: black;
-  text-align: center;
-}
-p {
-  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: normal;
   text-align: center;
 }
 
-/* unvisited link */
-a:link {
+p,
+a,
+small {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+a {
   color: black;
   text-decoration: none;
+  font-family: sans-serif;
 }
 
-/* visited link */
-a:visited {
-  color: black;
+.bold {
+  font-weight: 600;
 }
 
-/* mouse over link */
-a:hover {
-  color: hotpink;
+/* Header */
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  margin-bottom: 6vh;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 6rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-grow: 1;
+}
+
+.site-nav li {
+  margin-left: 8vw;
+}
+
+.site-nav a {
+  font-size: 4rem;
+  font-weight: 600;
+}
+/* Gallery grid (print.html) */
+
+.poster-grid {
+  display: grid;
+  /* Line below is for a responsive grid without media queries */
+  /* grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); */
+  grid-template-columns: 1fr;
+  row-gap: 1vw;
+}
+
+@media screen and (min-width: 450px) {
+  .poster-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .poster-grid {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.poster-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.poster-container a {
+  grid-area: 1 / 1;
+}
+
+.poster {
+  width: 100%;
+  display: block;
+}
+
+/* Artwork page (poster-01.html) */
+
+.poster-gif {
+  width: 20%;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
