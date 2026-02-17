@@ -64,6 +64,15 @@ header {
   font-weight: 600;
 }
 
+.site-nav li:last-child {
+  margin-left: auto;
+  margin-right: 3vw;
+}
+
+.shopping-cart {
+  height: 2rem;
+}
+
 /* Gallery grid (print.html) */
 
 .poster-grid {
@@ -121,4 +130,30 @@ footer {
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
+}
+
+.add-to-cart-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: darkgray;
+}
+
+.product-back {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
 }
