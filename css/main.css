@@ -148,18 +148,18 @@ footer {
 
 @media screen and (min-width: 700px) {
   .product-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   row-gap: 1vw;
 }
 
 .poster-jpg {
-  width: 80%;
+  width: 50%;
 }
 
 .product-container {
@@ -171,10 +171,6 @@ footer {
 
 .product-container a {
   grid-area: 1 / 1;
-}
-
-.poster-gif {
-  width: 80%;
 }
 
 .poster-gif + p {
