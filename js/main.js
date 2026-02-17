@@ -1,50 +1,64 @@
-const addToCartButton = document.getElementById("add-to-cart-btn");
-const cartElement = document.getElementById("cart");
-const ITEM_NAME = "THE EYE";
-const ITEM_PRICE = 19.99;
-const ITEM_IMAGE = "img/poster-01.jpg";
-const clearButton = document.getElementById("clear-btn");
-const POSTER_01_QUANTITY_KEY = "cartQuantityPoster01";
+const addBtn = document.getElementById("add-to-cart-btn");
+const cartBox = document.getElementById("cart");
+const clearBtn = document.getElementById("clear-btn");
 
-function renderCart() {
-  if (!cartElement) {
+const productName = "THE EYE";
+const productPrice = 19.99;
+const productImage = "img/poster-01.jpg";
+const qtyKey = "cartQuantityPoster01";
+
+function drawCart() {
+  if (!cartBox) return;
+
+  const qty = Number(localStorage.getItem(qtyKey) || "0");
+
+  if (qty <= 0) {
+    cartBox.textContent = "Your cart is currently empty.";
+    if (clearBtn) clearBtn.style.display = "none";
     return;
   }
 
-  const poster01Quantity = Number(
-    localStorage.getItem(POSTER_01_QUANTITY_KEY) || "0",
-  );
+  const itemTotal = productPrice * qty;
 
-  const poster01Total = ITEM_PRICE * poster01Quantity;
-  const cartTotal = poster01Total;
+  cartBox.innerHTML = `
+    <img src="${productImage}" alt="${productName}" style="width: 20%; display: block; margin: 0 auto 10px;">
+    ${productName} x ${qty} = $${itemTotal.toFixed(2)}<br>
+    <button id="remove-one-btn" class="clear-cart">Remove one</button><br>
+    Cart Total: <span style="font-size: 2em;">$${itemTotal.toFixed(2)}</span>
+  `;
 
-  if (poster01Quantity > 0) {
-    cartElement.innerHTML = `<img src="${ITEM_IMAGE}" alt="${ITEM_NAME}" style="width: 20%; display: block; margin: 0 auto 10px;">
-${ITEM_NAME} x ${poster01Quantity} = $${poster01Total.toFixed(2)}<br>
-Cart Total: <span style="font-size: 2em;">$${cartTotal.toFixed(2)}</span>`;
-  } else {
-    cartElement.textContent = "Your cart is currently empty.";
-    clearButton.remove(clearButton);
+  if (clearBtn) clearBtn.style.display = "inline-block";
+
+  const removeOneBtn = document.getElementById("remove-one-btn");
+  if (removeOneBtn) {
+    removeOneBtn.onclick = function () {
+      const currentQty = Number(localStorage.getItem(qtyKey) || "0");
+      const nextQty = currentQty - 1;
+
+      if (nextQty <= 0) {
+        localStorage.removeItem(qtyKey);
+      } else {
+        localStorage.setItem(qtyKey, String(nextQty));
+      }
+
+      drawCart();
+    };
   }
 }
 
-if (addToCartButton) {
-  addToCartButton.addEventListener("click", function () {
-    const currentQuantity = Number(
-      localStorage.getItem(POSTER_01_QUANTITY_KEY) || "0",
-    );
-    const newQuantity = currentQuantity + 1;
-    localStorage.setItem(POSTER_01_QUANTITY_KEY, String(newQuantity));
-    alert("Item added to cart!");
-  });
+if (addBtn) {
+  addBtn.onclick = function () {
+    const qty = Number(localStorage.getItem(qtyKey) || "0");
+    localStorage.setItem(qtyKey, String(qty + 1));
+    console.log("Item added to cart!");
+  };
 }
 
-if (clearButton) {
-  clearButton.addEventListener("click", function () {
-    localStorage.removeItem(POSTER_01_QUANTITY_KEY);
-    renderCart();
-    this.remove(clearButton);
-  });
+if (clearBtn) {
+  clearBtn.onclick = function () {
+    localStorage.removeItem(qtyKey);
+    drawCart();
+  };
 }
 
-renderCart();
+drawCart();
