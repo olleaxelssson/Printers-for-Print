@@ -26,6 +26,8 @@ header {
   top: 0rem;
   background-color: white;
   margin-bottom: 3vh;
+  max-height: 50vh;
+  overflow-y: auto;
 }
 
 footer {
