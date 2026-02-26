@@ -1,0 +1,210 @@
+/* HERO HIGHLIGHT */
+.highlight {
+  font-style: normal;
+  transition:
+    font-style 0.2s ease,
+    opacity 0.4s ease;
+}
+.highlight.active {
+  font-style: italic;
+}
+.highlight-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.highlight-normal,
+.highlight-italic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:
+    opacity 0.1s ease-out,
+    letter-spacing 0.6s ease;
+  letter-spacing: 0.1rem;
+  color: #ffd700;
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.9),
+    0 0 20px rgba(255, 200, 0, 0.6),
+    0 0 50px rgba(255, 170, 0, 0.4);
+}
+.highlight-normal {
+  position: relative;
+  opacity: 1;
+  color: #d4af37;
+  text-shadow:
+    0 0 8px rgba(212, 175, 55, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.6),
+    0 0 45px rgba(212, 175, 55, 0.3);
+}
+.highlight-italic {
+  font-style: italic;
+  opacity: 0;
+}
+.highlight-wrapper.active .highlight-normal {
+  opacity: 0;
+  letter-spacing: 0.35rem;
+}
+.highlight-wrapper.active .highlight-italic {
+  opacity: 1;
+  letter-spacing: 0.35rem;
+}
+
+/* HERO HIGHLIGHT 2 */
+.highlight-2 {
+  font-style: normal;
+  transition:
+    font-style 0.2s ease,
+    opacity 0.4s ease;
+}
+.highlight-2.active {
+  font-style: italic;
+}
+.highlight-wrapper-2 {
+  position: relative;
+  display: inline-block;
+}
+.highlight-normal-2,
+.highlight-italic-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:
+    opacity 0.1s ease-out,
+    letter-spacing 0.6s ease;
+  letter-spacing: 0.1rem;
+  color: #ffd700;
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.9),
+    0 0 20px rgba(255, 200, 0, 0.6),
+    0 0 50px rgba(255, 170, 0, 0.4);
+}
+.highlight-normal-2 {
+  position: relative;
+  opacity: 1;
+  color: #d4af37;
+  text-shadow:
+    0 0 8px rgba(212, 175, 55, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.6),
+    0 0 45px rgba(212, 175, 55, 0.3);
+}
+.highlight-italic-2 {
+  font-style: italic;
+  opacity: 0;
+}
+.highlight-wrapper-2.active .highlight-normal-2 {
+  opacity: 0;
+  letter-spacing: 0.35rem;
+}
+.highlight-wrapper-2.active .highlight-italic-2 {
+  opacity: 1;
+  letter-spacing: 0.35rem;
+}
+
+/* HERO */
+.hero {
+  margin-top: 160px;
+  padding: 8rem 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.hero-content {
+  max-width: 900px;
+}
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: 0.2rem;
+  color: #d4af37;
+  text-shadow:
+    0 0 8px rgba(212, 175, 55, 0.8),
+    0 0 20px rgba(212, 175, 55, 0.6),
+    0 0 45px rgba(212, 175, 55, 0.3);
+  animation: goldGlow 4s ease-in-out infinite;
+}
+
+/* HERO TEXT & BUTTON */
+.hero-subtext {
+  margin: 3rem 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #cbbf92;
+}
+.hero-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  font-size: 0.85rem;
+  letter-spacing: 0.25rem;
+  transition: 0.3s ease;
+}
+.hero-btn:hover {
+  background: black;
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+}
+
+/* ABOUT PREVIEW */
+.about-preview {
+  padding: 10rem 40px;
+  border-top: 2px solid #1a1a22;
+  border-bottom: 2px solid #1a1a22;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #0f0f14;
+}
+.about-text {
+  max-width: 700px;
+}
+.about-text h2 {
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  margin-bottom: 2rem;
+}
+.about-text p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+}
+
+/* FEATURES */
+.features {
+  padding: 8rem 40px;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+}
+.feature h3 {
+  font-size: 0.95rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+.feature p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+  color: #cbbf92;
+}
+.secondary-btn {
+  display: inline-block;
+  padding: 0.8rem 2.2rem;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  font-size: 0.85rem;
+  letter-spacing: 0.2rem;
+  transition: 0.3s ease;
+}
+.secondary-btn:hover {
+  background: black;
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+}

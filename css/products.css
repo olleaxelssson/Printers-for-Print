@@ -1,0 +1,128 @@
+/* PRODUCTS PAGE */
+.products-main {
+  margin-top: 160px;
+  padding: 4rem 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.products-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.products-header p {
+  color: #cbbf92;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+}
+
+.products-header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 0.25rem;
+}
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3.5rem;
+}
+.poster-container {
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.poster-container:hover {
+  transform: translateY(-8px);
+}
+.poster {
+  width: 100%;
+  display: block;
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+.poster-grid .poster {
+  filter: grayscale(100%);
+}
+.poster-container:hover .poster {
+  transform: scale(1.08);
+  filter: grayscale(0%);
+}
+
+/* PRODUCT PAGE */
+.product-header {
+  margin-top: 180px;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.product-header h1 {
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1rem;
+}
+.product-header p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #cbbf92;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+}
+.product-grid {
+  padding: 0 40px 6rem 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.poster-jpg {
+  width: 100%;
+}
+.product-container p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #cbbf92;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+}
+.add-to-cart-btn {
+  padding: 1rem 2.8rem;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  font-size: 0.85rem;
+  letter-spacing: 0.25rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.add-to-cart-btn:hover {
+  background: black;
+  color: white;
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+}
+.quantity-btn {
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.quantity-selector {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+.quantity-selector button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.quantity-selector span {
+  font-size: 1.2rem;
+  min-width: 30px;
+  text-align: center;
+}

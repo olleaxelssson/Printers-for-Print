@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", () => {
     if (nav) {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 10) {
         nav.classList.add("scrolled");
       } else {
         nav.classList.remove("scrolled");
@@ -34,10 +34,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (highlightWrapper) {
-      if (window.scrollY > 80) {
+      if (window.scrollY > 20) {
         highlightWrapper.classList.add("active");
       } else {
         highlightWrapper.classList.remove("active");
+      }
+    }
+  });
+
+  /* =========================
+     HIGHLIGHT ANIMATION 2
+  ========================== */
+
+  const highlightWrapper2 = document.querySelector(".highlight-wrapper-2");
+
+  /* =========================
+     SCROLL LISTENER 2
+  ========================== */
+
+  window.addEventListener("scroll", () => {
+    if (nav) {
+      if (window.scrollY > 40) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    }
+
+    if (highlightWrapper2) {
+      if (window.scrollY > 80) {
+        highlightWrapper2.classList.add("active");
+      } else {
+        highlightWrapper2.classList.remove("active");
       }
     }
   });
