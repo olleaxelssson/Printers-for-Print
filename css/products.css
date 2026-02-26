@@ -30,6 +30,8 @@
 }
 .poster-container:hover {
   transform: translateY(-8px);
+  transform: scale3d(1.03, 1.03, 1.03);
+  transition: transform 0.4s ease;
 }
 .poster {
   width: 100%;
@@ -43,9 +45,18 @@
 }
 .poster-container:hover .poster {
   transform: scale(1.08);
+  transition:
+    scale 1s ease-in,
+    filter 0.1s ease-in;
   filter: grayscale(0%);
+  transform: scale3d(1.03, 1.03, 1.03);
 }
-
+.poster-container .poster {
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
 /* PRODUCT PAGE */
 .product-header {
   margin-top: 180px;
@@ -90,13 +101,17 @@
   background: transparent;
   font-size: 0.85rem;
   letter-spacing: 0.25rem;
-  transition: 0.3s ease;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
   cursor: pointer;
 }
 .add-to-cart-btn:hover {
+  transform: scale3d(1.03, 1.03, 1.03);
   background: black;
-  color: white;
   filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+  transition: transform 0.2s ease-in;
 }
 .quantity-btn {
   border: 2px solid #d4af37;
@@ -106,6 +121,13 @@
   height: 32px;
   cursor: pointer;
 }
+.quantity-btn:hover {
+  transform: scale3d(1.03, 1.03, 1.03);
+  background: black;
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+  transition: transform 0.2s ease-in;
+}
+
 .quantity-selector {
   display: flex;
   gap: 1rem;

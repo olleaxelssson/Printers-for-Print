@@ -51,7 +51,12 @@ a {
 .site-nav a {
   transition: opacity 0.3s ease;
 }
-
+.site-nav .logo {
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
 .site-nav .logo:hover {
   filter: drop-shadow(0 0 24px rgba(212, 175, 55, 0.8));
   transition: filter 1s ease-out;
@@ -67,7 +72,7 @@ a {
 }
 .logo {
   height: 3rem;
-  filter: drop-shadow(0 0 24px rgba(212, 175, 55, 0.8));
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 1));
 }
 .shopping-cart {
   height: 2rem;
@@ -83,11 +88,15 @@ a {
 .nav-links a {
   font-size: 0.9rem;
   letter-spacing: 0.18rem;
-  transition: opacity 0.3s ease;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
 }
 .nav-links a:hover {
   filter: drop-shadow(0 0 24px rgba(212, 175, 55, 0.8));
   transition: filter 1s ease-out;
+  transform: scale3d(1.03, 1.03, 1.03);
 }
 
 .hamburger {
@@ -164,4 +173,25 @@ footer,
   .hero-subtext {
     font-size: clamp(0.9rem, 4vw, 1rem);
   }
+}
+
+.footer-icon {
+  filter: drop-shadow(0px 0px 5px rgba(212, 175, 55, 0.9));
+  width: 32px;
+  height: 32px;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+.footer-icon:hover {
+  filter: drop-shadow(0px 0px 3px rgba(212, 175, 55, 1));
+  transform: translateY(-5px);
+  transition:
+    filter 1s ease-out,
+    transform 3s ease-out;
 }

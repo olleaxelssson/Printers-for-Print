@@ -59,13 +59,17 @@
   height: 32px;
   cursor: pointer;
 }
-.remove-btn {
-  font-size: 0.8rem;
-  letter-spacing: 0.15rem;
-  padding: 0.7vw;
-  border: 2px solid #d4af37;
-  cursor: pointer;
+.quantity-btn p {
+  font-size: 1.7rem;
+  margin: 0;
 }
+.quantity-btn:hover {
+  transform: scale3d(1.03, 1.03, 1.03);
+  background: black;
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+  transition: transform 0.2s ease-in;
+}
+
 .cart-summary {
   padding-top: 1rem;
   display: flex;
@@ -123,6 +127,10 @@
   font-size: 0.85rem;
   letter-spacing: 0rem;
   transition: 0.3s ease;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
 }
 .cart-controls button:hover {
   background: black;
@@ -136,11 +144,17 @@
   background: transparent;
   font-size: 0.85rem;
   letter-spacing: 0.25rem;
-  transition: 0.3s ease;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+  cursor: pointer;
 }
 .remove-btn:hover {
   background: black;
   filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+  transition: 0.3s ease;
+  transform: scale3d(1.03, 1.03, 1.03);
 }
 .quantity-selector {
   display: flex;
@@ -171,8 +185,15 @@
   font-size: 0.85rem;
   letter-spacing: 0.2rem;
   transition: 0.3s ease;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+  cursor: pointer;
 }
 .secondary-btn:hover {
   background: black;
   filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+  transform: scale3d(1.03, 1.03, 1.03);
+  transition: transform 0.3s ease;
 }

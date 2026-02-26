@@ -143,6 +143,7 @@
 .hero-btn:hover {
   background: black;
   filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+  transform: scale3d(1.03, 1.03, 1.03);
 }
 
 /* ABOUT PREVIEW */
@@ -207,4 +208,5 @@
 .secondary-btn:hover {
   background: black;
   filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+  transform: scale3d(1.03, 1.03, 1.03);
 }

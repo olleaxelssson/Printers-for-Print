@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>$${item.price.toFixed(2)}</p>
   
           <div class="cart-controls">
-            <button data-index="${index}" data-action="decrease">-</button>
+            <button class="quantity-btn" data-index="${index}" data-action="decrease"><p>-</p></button>
             <span>${item.quantity}</span>
-            <button data-index="${index}" data-action="increase">+</button>
+            <button class="quantity-btn" data-index="${index}" data-action="increase"><p>+</p></button>
           </div>
   
           <span class="remove-btn" data-index="${index}">REMOVE</span>
